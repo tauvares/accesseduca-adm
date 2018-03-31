@@ -3,17 +3,17 @@
       <div class="col-xs-12">
          <ul class="breadcrumb">
              <li><a  ui-sref="app">Home</a></li>
-             <li class="active">Gerenciar Facilitadores</li>
+             <li class="active">Gerenciar Terapeutas</li>
          </ul>
       </div>
       <div class="col-xs-12">
-         <h3>Facilitadores Cadastrados</h3>
+         <h3>Terapeutas Cadastrados</h3>
          <hr>
       </div>
   </div>
   <div class="row row-content">
       <div class="col-xs-12">
-        <h4>Buscar Facilitador &nbsp;&nbsp;&nbsp;
+        <h4>Buscar Terapeutas &nbsp;&nbsp;&nbsp;
            <small>Nome: &nbsp;
                 <input ng-model="filtraNome">
            </small>
@@ -58,7 +58,7 @@
 
   <div id="cadastro" class="row row-content">
       <div class="col-xs-12">
-          <h3>Criar/Alterar/Excluir Facilitadores</h3>
+          <h3>Criar/Alterar/Excluir Terapeutas</h3>
       </div>
       <div class="col-xs-12 col-sm-9">
           <form class="form-horizontal" name="facilitadorForm" ng-submit="saveFacilitador()" novalidate>
@@ -204,10 +204,10 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-success" ng-disabled="facilitadorForm.$invalid">Salvar Facilitador</button>
+                    <button type="submit" class="btn btn-success" ng-disabled="facilitadorForm.$invalid">Salvar Terapeuta</button>
                     <button class="btn btn-success" ng-click="deleteFacilitador(facilitador.id)">
                       <span class="glyphicon glyphicon-remove" aria-hidden="true">
-                      </span> Excluir Facilitador
+                      </span> Excluir Terapeuta
                     </button>
                 </div>
             </div>

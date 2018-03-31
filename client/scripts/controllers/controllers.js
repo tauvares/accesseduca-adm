@@ -26,32 +26,29 @@ angular.module('accesseducaApp')
         $scope.loggedIn = false;
         $scope.username = '';
         $scope.usuarioId = '';
-        //$location.path('/sistem');
-        $state.go('accesseduca.sistema.inicio');
+        $state.go('accesseduca');
       };
       $scope.openHome = function() {
-        $state.go('accesseduca.publico');
+        $state.go('accesseduca');
       };
       $scope.openMapa = function() {
-        $state.go('accesseduca.publico.mapa');
+        $state.go('accesseduca.mapa');
       };
       $scope.openUsuarios = function(usuarioId) {
-        console.log(usuarioId);
-        $state.go('accesseduca.sistema.usuarios', {id: usuarioId.usuarioId});
+        $state.go('accesseduca.usuarios', {id: usuarioId.usuarioId});
       };
       $scope.openFacilitadores = function(usuarioId) {
-        console.log(usuarioId);
-        $state.go('accesseduca.sistema.facilitadores', {id: usuarioId.usuarioId});
+        $state.go('accesseduca.facilitadores', {id: usuarioId.usuarioId});
       };
       $scope.openFacilitadoresPorEstado = function(estado) {
         //console.log('Entrou0');
-        $state.go('accesseduca.publico.facilitadores', {uf: estado});
+        $state.go('accesseduca.facilitadores', {uf: estado});
       };
       $rootScope.$on('login:Successful', function() {
         $scope.loggedIn = AuthService.isAuthenticated();
         $scope.username = AuthService.getUsername();
         $scope.usuarioId = AuthService.getUsuarioId();
-        $state.go('accesseduca.sistema.facilitadores');
+        $state.go('accesseduca.facilitadores');
       });
       $rootScope.$on('registration:Successful', function() {
         $scope.loggedIn = AuthService.isAuthenticated();

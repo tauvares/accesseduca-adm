@@ -14,6 +14,7 @@ angular.module('accesseducaApp')
             $rootScope.mantendo = true;
             $rootScope.$broadcast('login:Successful');
           },
+          
           function(response) {
             var message = '\
                 <div class="ngdialog-message">\
